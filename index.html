@@ -1,0 +1,124 @@
+import java.util.ArrayList;
+import java.util.Collections;
+class Dealer
+{
+ int numOfCards;
+ Card[]   deck; 
+
+ Dealer( int num)
+ {
+  numOfcards = num;
+  deck = new Card[num];
+ }
+
+ void disAllCards()
+ {
+  for( int i = 0; i < deck.length; i++ )
+  {
+   System.out.print( deck[i] + " ");
+   if( i % 10 == 9 )
+   {
+    System.out.print("\n")                               
+   }
+  }
+ }
+                                  
+ void ArrayAndShuffle()
+ {
+  int[] numb = num int[deck.length];
+  for( int i = 0; i < deck.length; i++ )
+   numb[i] = (int)(Math.random()*deck.length);
+
+   ArrayList<Integer> list = new ArrayList<Integer>();
+   for( int j = 0; j < deck.length; j++ )
+    list.add(j);
+                                   
+   Collections.shuffle(list);
+                                  
+   for( int k = 0; k < deck.length; k++ )
+   {
+    System.out.print( deck[list.get(k)]+" ");
+    if( k % 10 == 9 )
+    {
+     System.out.print("\n");
+    }
+   }
+  }
+     
+  void popcard()
+  {
+   for( int count = 0; count < numOfCards; count++ )
+   {
+     numOfCards--;
+   }
+  }
+}
+                                          
+class Main
+{
+ public static void main( String[] args )
+ {
+  System.out.println("ディーラーを紹介します");
+  Dealer piles = new Dealer(53);
+  piles.deck[0] = new Card( Suit.SPADES, 1 );
+  piles.deck[1] = new Card( Suit.SPADES, 2 ); 
+  piles.deck[2] = new Card( Suit.SPADES, 3 );     
+  piles.deck[3] = new Card( Suit.SPADES, 4 );                                        
+  piles.deck[4] = new Card( Suit.SPADES, 5 );
+  piles.deck[5] = new Card( Suit.SPADES, 6 );                                        
+  piles.deck[6] = new Card( Suit.SPADES, 7 );                                       
+  piles.deck[7] = new Card( Suit.SPADES, 8 );                                      
+  piles.deck[8] = new Card( Suit.SPADES, 9 );                                        
+  piles.deck[9] = new Card( Suit.SPADES, 10 );                                         
+  piles.deck[10] = new Card( Suit.SPADES, 11 );                                        
+  piles.deck[11] = new Card( Suit.SPADES, 12 );
+  piles.deck[12] = new Card( Suit.SPADES, 13 );                                        
+  piles.deck[13] = new Card( Suit.HEARTS, 1 );                                        
+  piles.deck[14] = new Card( Suit.HEARTS, 2 );                                        
+  piles.deck[15] = new Card( Suit.HEARTS, 3 );                                        
+  piles.deck[16] = new Card( Suit.HEARTS, 4 );                                        
+  piles.deck[17] = new Card( Suit.HEARTS, 5 );                                        
+  piles.deck[18] = new Card( Suit.HEARTS, 6 );                                        
+  piles.deck[19] = new Card( Suit.HEARTS, 7 );                                        
+  piles.deck[20] = new Card( Suit.HEARTS, 8 );                                        
+  piles.deck[21] = new Card( Suit.HEARTS, 9 );                                        
+  piles.deck[22] = new Card( Suit.HEARTS, 10 );                                        
+  piles.deck[23] = new Card( Suit.HEARTS, 11 );                                        
+  piles.deck[24] = new Card( Suit.HEARTS, 12 );                                        
+  piles.deck[25] = new Card( Suit.HEARTS, 13 );                                        
+  piles.deck[26] = new Card( Suit.CLUBS, 1 );                                        
+  piles.deck[27] = new Card( Suit.CLUBS, 2 );                                        
+  piles.deck[28] = new Card( Suit.CLUBS, 3 );                                        
+  piles.deck[29] = new Card( Suit.CLUBS, 4 );                                        
+  piles.deck[30] = new Card( Suit.CLUBS, 5 );                                        
+  piles.deck[31] = new Card( Suit.CLUBS, 6 );                                        
+  piles.deck[32] = new Card( Suit.CLUBS, 7 );                                        
+  piles.deck[33] = new Card( Suit.CLUBS, 8 );                                        
+  piles.deck[34] = new Card( Suit.CLUBS, 9 );                                        
+  piles.deck[35] = new Card( Suit.CLUBS, 10 );                                        
+  piles.deck[36] = new Card( Suit.CLUBS, 11 );                                        
+  piles.deck[37] = new Card( Suit.CLUBS, 12 );                                        
+  piles.deck[38] = new Card( Suit.CLUBS, 13 );                                        
+  piles.deck[39] = new Card( Suit.DIAMONDS, 1 );                                        
+  piles.deck[40] = new Card( Suit.DIAMONDS, 2 );                                        
+  piles.deck[41] = new Card( Suit.DIAMONDS, 3 );                                        
+  piles.deck[42] = new Card( Suit.DIAMONDS, 4 );                                        
+  piles.deck[43] = new Card( Suit.DIAMONDS, 5 );                                        
+  piles.deck[44] = new Card( Suit.DIAMONDS, 6 );                                        
+  piles.deck[45] = new Card( Suit.DIAMONDS, 7 );                                        
+  piles.deck[46] = new Card( Suit.DIAMONDS, 8 );                                        
+  piles.deck[47] = new Card( Suit.DIAMONDS, 9 );                                        
+  piles.deck[48] = new Card( Suit.DIAMONDS, 10 );                                        
+  piles.deck[49] = new Card( Suit.DIAMONDS, 11 );                                        
+  piles.deck[50] = new Card( Suit.DIAMONDS, 12 );                                        
+  piles.deck[51] = new Card( Suit.DIAMONDS, 13 );                                        
+  piles.deck[52] = new Joker();                                        
+  piles.dispAllCards();                                        
+  System.out.println("\nカードをシャッフルします");
+  piles.ArrayAndShuffle();
+  System.out.println("\nカードを1枚ずつすべて取ります");
+  piles.popcard();
+  piles.ArrayAndShuffle();
+  }
+ }
+// end of Card4.java                                        
